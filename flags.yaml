@@ -53,5 +53,13 @@ featureFlags:
             op: segmentMatch
             values:
             - group
+        - priority: 1
+          serve:
+            serveVariation: all
+          clauses:
+          - attribute: ""
+            op: segmentMatch
+            values:
+            - admin
   projectIdentifier: multivarient
   orgIdentifier: default
