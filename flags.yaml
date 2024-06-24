@@ -61,5 +61,31 @@ featureFlags:
             op: segmentMatch
             values:
             - admin
+  - flag:
+      name: openfeature_flag
+      identifier: openfeature_flag
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "false"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: test
+        default:
+          onVariation: "false"
+          offVariation: "false"
+        state: "off"
+      - identifier: multi_ff
+        default:
+          onVariation: "false"
+          offVariation: "false"
+        state: "off"
   projectIdentifier: multivarient
   orgIdentifier: default
