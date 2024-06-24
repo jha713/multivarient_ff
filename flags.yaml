@@ -84,7 +84,7 @@ featureFlags:
         state: "off"
       - identifier: multi_ff
         default:
-          onVariation: "false"
+          onVariation: "true"
           offVariation: "false"
         state: "on"
         targetRules:
