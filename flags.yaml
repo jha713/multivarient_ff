@@ -87,5 +87,9 @@ featureFlags:
           onVariation: "false"
           offVariation: "false"
         state: "off"
+        targetRules:
+        - targets:
+          - identifier: openidentifier
+          variation: "true"
   projectIdentifier: multivarient
   orgIdentifier: default
