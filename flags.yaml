@@ -90,6 +90,6 @@ featureFlags:
         targetRules:
         - targets:
           - identifier: openidentifier
-          variation: "true"
+          variation: "false"
   projectIdentifier: multivarient
   orgIdentifier: default
