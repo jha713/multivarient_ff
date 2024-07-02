@@ -29,7 +29,7 @@ featureFlags:
         state: "off"
       - identifier: multi_ff
         default:
-          onVariation: all
+          onVariation: read
           offVariation: read
         state: "on"
         rules:
