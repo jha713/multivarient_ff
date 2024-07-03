@@ -1,0 +1,95 @@
+featureFlags:
+  flags:
+  - flag:
+      name: multivariant
+      identifier: multivariant
+      description: ""
+      permanent: false
+      spec:
+        type: string
+        default:
+          onVariation: read
+          offVariation: read
+        variations:
+        - identifier: create
+          value: c
+        - identifier: read
+          value: r
+        - identifier: update
+          value: u
+        - identifier: delete
+          value: d
+        - identifier: all
+          value: a
+      environments:
+      - identifier: test
+        default:
+          onVariation: read
+          offVariation: read
+        state: "off"
+      - identifier: multi_ff
+        default:
+          onVariation: read
+          offVariation: read
+        state: "off"
+        rules:
+        - priority: 0
+          serve:
+            distribution:
+              bucketBy: identifier
+              variations:
+              - weight: 20
+                variation: create
+              - weight: 20
+                variation: read
+              - weight: 20
+                variation: update
+              - weight: 20
+                variation: delete
+              - weight: 20
+                variation: all
+          clauses:
+          - attribute: ""
+            op: segmentMatch
+            values:
+            - group
+        - priority: 1
+          serve:
+            serveVariation: all
+          clauses:
+          - attribute: ""
+            op: segmentMatch
+            values:
+            - admin
+  - flag:
+      name: openfeature_flag
+      identifier: openfeature_flag
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "false"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: test
+        default:
+          onVariation: "false"
+          offVariation: "false"
+        state: "off"
+      - identifier: multi_ff
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "on"
+        targetRules:
+        - targets:
+          - identifier: openidentifier
+          variation: "true"
+  projectIdentifier: multivarient
+  orgIdentifier: default
