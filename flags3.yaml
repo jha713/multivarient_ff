@@ -31,7 +31,7 @@ featureFlags:
         default:
           onVariation: all
           offVariation: read
-        state: "off"
+        state: "on"
         rules:
         - priority: 1
           serve:
