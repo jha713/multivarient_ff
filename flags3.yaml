@@ -42,6 +42,32 @@ featureFlags:
             values:
             - admin
   - flag:
+      name: multivariant_number
+      identifier: multivariant_number
+      description: number variation
+      permanent: false
+      spec:
+        type: int
+        default:
+          onVariation: variation11
+          offVariation: variation22
+        variations:
+        - identifier: variation11
+          value: "1"
+        - identifier: variation22
+          value: "2"
+      environments:
+      - identifier: test
+        default:
+          onVariation: variation11
+          offVariation: variation22
+        state: "off"
+      - identifier: multi_ff
+        default:
+          onVariation: variation11
+          offVariation: variation22
+        state: "off"
+  - flag:
       name: openfeature_flag
       identifier: openfeature_flag
       description: ""
