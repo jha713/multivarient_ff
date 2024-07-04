@@ -1,6 +1,32 @@
 featureFlags:
   flags:
   - flag:
+      name: json_object_variation
+      identifier: json_object_variation
+      description: ""
+      permanent: false
+      spec:
+        type: json
+        default:
+          onVariation: test1
+          offVariation: test2
+        variations:
+        - identifier: test1
+          value: "1"
+        - identifier: test2
+          value: "0"
+      environments:
+      - identifier: test
+        default:
+          onVariation: test1
+          offVariation: test2
+        state: "off"
+      - identifier: multi_ff
+        default:
+          onVariation: test1
+          offVariation: test2
+        state: "off"
+  - flag:
       name: multivariant
       identifier: multivariant
       description: ""
