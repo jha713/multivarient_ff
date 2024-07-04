@@ -66,7 +66,7 @@ featureFlags:
         default:
           onVariation: variation11
           offVariation: variation22
-        state: "on"
+        state: "off"
   - flag:
       name: openfeature_flag
       identifier: openfeature_flag
