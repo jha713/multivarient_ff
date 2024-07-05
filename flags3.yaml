@@ -12,9 +12,9 @@ featureFlags:
           offVariation: test2
         variations:
         - identifier: test1
-          value: "1"
+          value: '[1]'
         - identifier: test2
-          value: "0"
+          value: '[0]'
       environments:
       - identifier: test
         default:
