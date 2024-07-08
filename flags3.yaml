@@ -118,7 +118,7 @@ featureFlags:
         default:
           onVariation: "true"
           offVariation: "false"
-        state: "on"
+        state: "off"
         targetRules:
         - targets:
           - identifier: openidentifier
