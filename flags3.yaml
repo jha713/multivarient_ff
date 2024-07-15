@@ -59,6 +59,14 @@ featureFlags:
           offVariation: read
         state: "on"
         rules:
+        - priority: 0
+          serve:
+            serveVariation: read
+          clauses:
+          - attribute: ""
+            op: segmentMatch
+            values:
+            - group
         - priority: 1
           serve:
             serveVariation: all
