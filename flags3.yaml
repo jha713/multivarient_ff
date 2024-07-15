@@ -75,10 +75,6 @@ featureFlags:
             op: segmentMatch
             values:
             - admin
-        targetRules:
-        - targets:
-          - identifier: user10@trinet.com
-          variation: all
   - flag:
       name: multivariant_number
       identifier: multivariant_number
