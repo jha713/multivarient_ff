@@ -59,22 +59,6 @@ featureFlags:
           offVariation: read
         state: "on"
         rules:
-        - priority: 1
-          serve:
-            serveVariation: read
-          clauses:
-          - attribute: ""
-            op: segmentMatch
-            values:
-            - NonAdmin
-        - priority: 2
-          serve:
-            serveVariation: all
-          clauses:
-          - attribute: ""
-            op: segmentMatch
-            values:
-            - admin
         - priority: 4
           serve:
             distribution:
