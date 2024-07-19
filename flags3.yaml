@@ -64,11 +64,11 @@ featureFlags:
             distribution:
               bucketBy: identifier
               variations:
-              - weight: 80
+              - weight: 60
                 variation: create
               - weight: 20
                 variation: read
-              - weight: 0
+              - weight: 20
                 variation: update
               - weight: 0
                 variation: delete
