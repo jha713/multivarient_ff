@@ -60,17 +60,17 @@ featureFlags:
         state: "on"
         targetRules:
         - targets:
-          - identifier: user1@rinet.com
+          - identifier: user4@trinet.com
+          variation: delete
+        - targets:
+          - identifier: user1@trinet.com
           variation: create
         - targets:
-          - identifier: user2@rinet.com
+          - identifier: user2@trinet.com
           variation: read
         - targets:
           - identifier: user3@trinet.com
           variation: update
-        - targets:
-          - identifier: user4@trinet.com
-          variation: delete
   - flag:
       name: multivariant_number
       identifier: multivariant_number
