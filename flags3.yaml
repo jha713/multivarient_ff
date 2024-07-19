@@ -75,6 +75,26 @@ featureFlags:
             op: segmentMatch
             values:
             - admin
+        - priority: 4
+          serve:
+            distribution:
+              bucketBy: identifier
+              variations:
+              - weight: 20
+                variation: create
+              - weight: 20
+                variation: read
+              - weight: 20
+                variation: update
+              - weight: 20
+                variation: delete
+              - weight: 20
+                variation: all
+          clauses:
+          - attribute: ""
+            op: segmentMatch
+            values:
+            - roll_out
   - flag:
       name: multivariant_number
       identifier: multivariant_number
