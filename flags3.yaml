@@ -58,15 +58,6 @@ featureFlags:
           onVariation: all
           offVariation: read
         state: "on"
-        rules:
-        - priority: 6
-          serve:
-            serveVariation: all
-          clauses:
-          - attribute: ""
-            op: segmentMatch
-            values:
-            - admin
         targetRules:
         - targets:
           - identifier: user1@rinet.com
