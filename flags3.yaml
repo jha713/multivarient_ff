@@ -38,15 +38,15 @@ featureFlags:
           offVariation: read
         variations:
         - identifier: create
-          value: c
+          value: create
         - identifier: read
-          value: r
+          value: read
         - identifier: update
-          value: u
+          value: update
         - identifier: delete
-          value: d
+          value: delete
         - identifier: all
-          value: a
+          value: all
       environments:
       - identifier: test
         default:
