@@ -58,11 +58,28 @@ featureFlags:
           onVariation: all
           offVariation: read
         state: "on"
+        rules:
+        - priority: 6
+          serve:
+            serveVariation: all
+          clauses:
+          - attribute: ""
+            op: segmentMatch
+            values:
+            - admin
         targetRules:
         - targets:
-          - identifier: user9@rinet.com
-          - identifier: user11@rinet.com
-          variation: all
+          - identifier: user1@rinet.com
+          variation: create
+        - targets:
+          - identifier: user2@rinet.com
+          variation: read
+        - targets:
+          - identifier: user3@trinet.com
+          variation: update
+        - targets:
+          - identifier: user4@trinet.com
+          variation: delete
   - flag:
       name: multivariant_number
       identifier: multivariant_number
