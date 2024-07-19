@@ -80,15 +80,15 @@ featureFlags:
             distribution:
               bucketBy: identifier
               variations:
-              - weight: 20
+              - weight: 80
                 variation: create
               - weight: 20
                 variation: read
-              - weight: 20
+              - weight: 0
                 variation: update
-              - weight: 20
+              - weight: 0
                 variation: delete
-              - weight: 20
+              - weight: 0
                 variation: all
           clauses:
           - attribute: ""
