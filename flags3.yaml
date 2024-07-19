@@ -58,6 +58,23 @@ featureFlags:
           onVariation: all
           offVariation: read
         state: "on"
+        rules:
+        - priority: 1
+          serve:
+            serveVariation: read
+          clauses:
+          - attribute: ""
+            op: segmentMatch
+            values:
+            - NonAdmin
+        - priority: 2
+          serve:
+            serveVariation: all
+          clauses:
+          - attribute: ""
+            op: segmentMatch
+            values:
+            - admin
         targetRules:
         - targets:
           - identifier: user4@trinet.com
@@ -65,9 +82,6 @@ featureFlags:
         - targets:
           - identifier: user1@trinet.com
           variation: create
-        - targets:
-          - identifier: user2@trinet.com
-          variation: read
         - targets:
           - identifier: user3@trinet.com
           variation: update
