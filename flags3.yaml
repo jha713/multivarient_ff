@@ -25,7 +25,7 @@ featureFlags:
         default:
           onVariation: test1
           offVariation: test2
-        state: "on"
+        state: "off"
   - flag:
       name: multivariant
       identifier: multivariant
