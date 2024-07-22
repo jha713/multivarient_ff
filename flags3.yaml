@@ -154,5 +154,22 @@ featureFlags:
           onVariation: "true"
           offVariation: "false"
         state: "off"
+        rules:
+        - priority: 0
+          serve:
+            serveVariation: "true"
+          clauses:
+          - attribute: ""
+            op: segmentMatch
+            values:
+            - admin
+        - priority: 1
+          serve:
+            serveVariation: "false"
+          clauses:
+          - attribute: ""
+            op: segmentMatch
+            values:
+            - NonAdmin
   projectIdentifier: multivarient
   orgIdentifier: default
