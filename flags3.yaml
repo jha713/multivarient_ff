@@ -154,9 +154,5 @@ featureFlags:
           onVariation: "true"
           offVariation: "false"
         state: "on"
-        targetRules:
-        - targets:
-          - identifier: openidentifier
-          variation: "true"
   projectIdentifier: multivarient
   orgIdentifier: default
