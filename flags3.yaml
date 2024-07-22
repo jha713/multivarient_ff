@@ -94,6 +94,12 @@ featureFlags:
           value: "1"
         - identifier: variation22
           value: "2"
+        - identifier: variation_admin
+          value: "5"
+        - identifier: variation_nonadmin
+          value: "10"
+        - identifier: variation_rollout
+          value: "15"
       environments:
       - identifier: test
         default:
