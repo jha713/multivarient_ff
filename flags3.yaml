@@ -30,6 +30,23 @@ featureFlags:
           onVariation: test1
           offVariation: test2
         state: "on"
+        rules:
+        - priority: 0
+          serve:
+            serveVariation: admin_variation
+          clauses:
+          - attribute: ""
+            op: segmentMatch
+            values:
+            - admin
+        - priority: 1
+          serve:
+            serveVariation: non_admin_variation
+          clauses:
+          - attribute: ""
+            op: segmentMatch
+            values:
+            - NonAdmin
   - flag:
       name: multivariant
       identifier: multivariant
