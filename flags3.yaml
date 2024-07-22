@@ -120,6 +120,14 @@ featureFlags:
             op: segmentMatch
             values:
             - admin
+        - priority: 2
+          serve:
+            serveVariation: variation_nonadmin
+          clauses:
+          - attribute: ""
+            op: segmentMatch
+            values:
+            - NonAdmin
   - flag:
       name: openfeature_flag
       identifier: openfeature_flag
