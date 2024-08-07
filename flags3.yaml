@@ -108,8 +108,8 @@ featureFlags:
       spec:
         type: int
         default:
-          onVariation: variation11
-          offVariation: variation22
+          onVariation: variation_admin
+          offVariation: variation_nonadmin
         variations:
         - identifier: variation11
           value: "1"
